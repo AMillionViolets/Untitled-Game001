@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+
+
 @onready var sprite_2d = $Sprite2D
 @onready var sprite_2d2 = $"Weapon Node/Weapon/Sprite2D"
 @onready var animation_player = $"Weapon Node/Weapon/AnimationPlayer"

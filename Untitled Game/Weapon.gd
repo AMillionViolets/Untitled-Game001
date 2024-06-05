@@ -3,4 +3,4 @@ extends Area2D
 
 # Called when the node enters the scene tree for the first time.
 func attack():
-	animation_player.play("Stick Swing")
+	animation_player.play("Sling Shot ")

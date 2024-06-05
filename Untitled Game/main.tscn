@@ -5128,6 +5128,7 @@ sources/0 = SubResource("TileSetAtlasSource_dcvcm")
 [node name="Main" type="Node"]
 
 [node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(3.74598, 1.06055)
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
