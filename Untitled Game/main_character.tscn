@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv0xqre3kg2ks"]
+
+[ext_resource type="Script" path="res://Main Character.gd" id="1_f1uqf"]
+[ext_resource type="PackedScene" uid="uid://bhqhcknps5e8r" path="res://weaponexample.tscn" id="2_hs7ip"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y6lr6"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sfky2"]
+load_path = "res://.godot/imported/Basic Humanoid Sprites 1x.png-bf53feafc58bb8f0ace4cf68cc2800dc.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r582e"]
+
+[node name="Main Character" type="CharacterBody2D"]
+position = Vector2(-25, -10)
+motion_mode = 1
+script = ExtResource("1_f1uqf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0.5, 1)
+zoom = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_y6lr6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_sfky2")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 17)
+
+[node name="Weapon Node" parent="." instance=ExtResource("2_hs7ip")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_r582e")
