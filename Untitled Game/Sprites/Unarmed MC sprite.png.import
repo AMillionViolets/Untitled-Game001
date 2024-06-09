@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj31pd67y1x3u"
-path="res://.godot/imported/roguelikeSheet_transparent.png-22f6b70da04549e371d1f15fe9d96005.ctex"
+uid="uid://8pljb576d1v7"
+path="res://.godot/imported/Unarmed MC sprite.png-22414d205e35149498ca43f20da730ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://roguelikeSheet_transparent.png"
-dest_files=["res://.godot/imported/roguelikeSheet_transparent.png-22f6b70da04549e371d1f15fe9d96005.ctex"]
+source_file="res://Sprites/Unarmed MC sprite.png"
+dest_files=["res://.godot/imported/Unarmed MC sprite.png-22414d205e35149498ca43f20da730ae.ctex"]
 
 [params]
 

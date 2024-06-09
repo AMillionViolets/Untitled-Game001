@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgonhtu15cw8g"
-path="res://.godot/imported/Basic Humanoid Sprites 4x.png-fe4ef4b792fb41faa2303b008b8405f6.ctex"
+uid="uid://dlt0vs7sotdox"
+path="res://.godot/imported/GoblinBowman.png-2df815aa18025d8122b23b990369b44b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Basic Humanoid Sprites 4x.png"
-dest_files=["res://.godot/imported/Basic Humanoid Sprites 4x.png-fe4ef4b792fb41faa2303b008b8405f6.ctex"]
+source_file="res://Sprites/GoblinBowman.png"
+dest_files=["res://.godot/imported/GoblinBowman.png-2df815aa18025d8122b23b990369b44b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8pljb576d1v7"
-path="res://.godot/imported/Unarmed MC sprite.png-17f3624b2b297df4c20a1797dfcf3ba5.ctex"
+uid="uid://cn8we7ea5byhu"
+path="res://.godot/imported/Basic Humanoid Sprites 1x.png-91b5cc9d069c7099070e22255bdbdd2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Unarmed MC sprite.png"
-dest_files=["res://.godot/imported/Unarmed MC sprite.png-17f3624b2b297df4c20a1797dfcf3ba5.ctex"]
+source_file="res://Sprites/Basic Humanoid Sprites 1x.png"
+dest_files=["res://.godot/imported/Basic Humanoid Sprites 1x.png-91b5cc9d069c7099070e22255bdbdd2b.ctex"]
 
 [params]
 

@@ -51,6 +51,11 @@ Mouse1={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Impassible "
+2d_physics/layer_2="Health "
+
 [physics]
 
 2d/default_gravity=100.0

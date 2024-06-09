@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dv0xqre3kg2ks"]
+[gd_scene load_steps=7 format=3 uid="uid://dv0xqre3kg2ks"]
 
 [ext_resource type="Script" path="res://Main Character.gd" id="1_f1uqf"]
 [ext_resource type="Texture2D" uid="uid://8pljb576d1v7" path="res://Sprites/Unarmed MC sprite.png" id="2_c8sk1"]
 [ext_resource type="PackedScene" uid="uid://bhqhcknps5e8r" path="res://weaponexample.tscn" id="2_hs7ip"]
 [ext_resource type="Script" path="res://HealthComponent.gd" id="4_b8l34"]
-[ext_resource type="Script" path="res://HitboxComponent.gd" id="5_3pfli"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y6lr6"]
 radius = 8.0
@@ -41,6 +40,3 @@ sprite_frames = SubResource("SpriteFrames_r582e")
 
 [node name="HealthComponent" type="Node2D" parent="."]
 script = ExtResource("4_b8l34")
-
-[node name="Hitbox Component" type="Area2D" parent="."]
-script = ExtResource("5_3pfli")

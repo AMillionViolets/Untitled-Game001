@@ -1,6 +1,15 @@
 extends Area2D
+@onready var shooting_point = $"Shooting Point"
 @onready var animation_player = $AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
+
+
 func attack():
+	const ROCK = preload("res://rock(bullet).tscn")
 	animation_player.play("Sling Shot ")
+	print("shooting rock")
+	var new_bullet = ROCK.instantiate()
+	new_bullet.global_position = shooting_point.global_position
+	new_bullet.global_rotation = shooting_point.global_rotation
+	shooting_point.add_child(new_bullet)
+

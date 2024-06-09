@@ -1,21 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://bkrlab65cquyb"]
 
+[ext_resource type="Texture2D" uid="uid://bgl7e5ga06r6s" path="res://Rock8x8.png" id="1_kuxxc"]
 [ext_resource type="Script" path="res://rock(bullet).gd" id="1_os4vh"]
-[ext_resource type="Texture2D" uid="uid://bgl7e5ga06r6s" path="res://Sprites/Rock8x8.png" id="2_21qls"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_e0gfx"]
 
 [node name="Rock(Bullet)" type="Area2D"]
 top_level = true
-scale = Vector2(0.25, 0.25)
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_os4vh")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(4, 4)
-texture = ExtResource("2_21qls")
+texture = ExtResource("1_kuxxc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.45, 0.45)

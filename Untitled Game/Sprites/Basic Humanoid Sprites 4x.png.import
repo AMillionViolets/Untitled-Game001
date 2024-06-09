@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn8we7ea5byhu"
-path="res://.godot/imported/Basic Humanoid Sprites 1x.png-bf53feafc58bb8f0ace4cf68cc2800dc.ctex"
+uid="uid://cgonhtu15cw8g"
+path="res://.godot/imported/Basic Humanoid Sprites 4x.png-73b0d55552a7db9375eb574e575320a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Basic Humanoid Sprites 1x.png"
-dest_files=["res://.godot/imported/Basic Humanoid Sprites 1x.png-bf53feafc58bb8f0ace4cf68cc2800dc.ctex"]
+source_file="res://Sprites/Basic Humanoid Sprites 4x.png"
+dest_files=["res://.godot/imported/Basic Humanoid Sprites 4x.png-73b0d55552a7db9375eb574e575320a6.ctex"]
 
 [params]
 

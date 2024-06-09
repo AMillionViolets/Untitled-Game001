@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8532k0lpnhmp"
-path="res://.godot/imported/HalflingSlinger.png-83e135d2421b63b735a572dc895dfcba.ctex"
+uid="uid://bj31pd67y1x3u"
+path="res://.godot/imported/roguelikeSheet_transparent.png-43cf0725a1d8821a7021f1ea277d5c68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HalflingSlinger.png"
-dest_files=["res://.godot/imported/HalflingSlinger.png-83e135d2421b63b735a572dc895dfcba.ctex"]
+source_file="res://Sprites/roguelikeSheet_transparent.png"
+dest_files=["res://.godot/imported/roguelikeSheet_transparent.png-43cf0725a1d8821a7021f1ea277d5c68.ctex"]
 
 [params]
 
