@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://dv0xqre3kg2ks"]
+
+[ext_resource type="Script" path="res://Player/Main Character.gd" id="1_vurdl"]
+[ext_resource type="Resource" uid="uid://dfupg84pliv4a" path="res://Inventroy/playerinventory.tres" id="2_2ilqw"]
+[ext_resource type="Texture2D" uid="uid://8pljb576d1v7" path="res://Sprites/Unarmed MC sprite.png" id="2_c8sk1"]
+[ext_resource type="PackedScene" uid="uid://bhqhcknps5e8r" path="res://Weapons/weaponexample.tscn" id="2_hs7ip"]
+[ext_resource type="PackedScene" uid="uid://d36gf4cloafqp" path="res://Components/hitbox_component.tscn" id="4_sfnne"]
+[ext_resource type="PackedScene" uid="uid://dxu7ydl2cjsmf" path="res://Components/health_component.tscn" id="5_lrmxj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kggpy"]
+size = Vector2(16, 15)
+
+[node name="Main Character" type="CharacterBody2D"]
+position = Vector2(-25, -10)
+collision_layer = 49
+collision_mask = 56
+motion_mode = 1
+script = ExtResource("1_vurdl")
+inventory = ExtResource("2_2ilqw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 1.5)
+shape = SubResource("RectangleShape2D_kggpy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0.5, 1)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+position_smoothing_enabled = true
+
+[node name="Weapon Node" parent="." instance=ExtResource("2_hs7ip")]
+position = Vector2(-3, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-3, 0)
+texture = ExtResource("2_c8sk1")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 17)
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_sfnne")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(-4, 2)
+shape = SubResource("RectangleShape2D_kggpy")
+
+[node name="HealthComponent" parent="." instance=ExtResource("5_lrmxj")]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = 9.0
+offset_right = 4.0
+offset_bottom = 13.0
+grow_vertical = 2
+
+[connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]

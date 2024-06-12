@@ -42,5 +42,6 @@ sprite_frames = SubResource("SpriteFrames_r582e")
 [node name="HealthComponent" type="Node2D" parent="."]
 script = ExtResource("4_b8l34")
 
-[node name="Hitbox Component" type="Area2D" parent="."]
+[node name="Hitbox Component" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
 script = ExtResource("5_3pfli")
+health_component = NodePath("../HealthComponent")

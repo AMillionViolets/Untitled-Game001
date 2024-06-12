@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkrlab65cquyb"]
+
+[ext_resource type="Script" path="res://Weapons/rock(bullet).gd" id="1_depm3"]
+[ext_resource type="Texture2D" uid="uid://bgl7e5ga06r6s" path="res://Sprites/Rock8x8.png" id="2_rnxq7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_35ncc"]
+radius = 20.0
+
+[node name="Rock(Bullet)" type="Area2D"]
+top_level = true
+scale = Vector2(0.25, 0.25)
+collision_layer = 4
+collision_mask = 18
+script = ExtResource("1_depm3")
+SPEED = 300
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_rnxq7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_35ncc")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

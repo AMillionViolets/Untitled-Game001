@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bhqhcknps5e8r"]
 
-[ext_resource type="Script" path="res://Weapon.gd" id="1_741rr"]
+[ext_resource type="Script" path="res://Weapons/Weapon.gd" id="1_741rr"]
 [ext_resource type="Texture2D" uid="uid://b2jixw2q3qny8" path="res://Sprites/Sling.png" id="2_wb2hm"]
-[ext_resource type="Script" path="res://Shooting Point.gd" id="3_vl48n"]
+[ext_resource type="Script" path="res://Player/Shooting Point.gd" id="3_vl48n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qj4hm"]
 size = Vector2(7, 12.5)
@@ -155,5 +155,5 @@ libraries = {
 }
 
 [node name="Shooting Point" type="Node2D" parent="Weapon"]
-position = Vector2(-11, 0)
+position = Vector2(-15, 0)
 script = ExtResource("3_vl48n")

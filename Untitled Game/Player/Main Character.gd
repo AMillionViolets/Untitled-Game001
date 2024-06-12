@@ -1,25 +1,28 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
+const SPEED = 200.0
 
 
 @onready var sprite_2d = $Sprite2D
-@onready var sprite_2d2 = $"Weapon Node/Weapon/Sprite2D"
-@onready var animation_player = $"Weapon Node/Weapon/AnimationPlayer"
 @onready var collision_shape_2d = $"Weapon Node/Weapon/CollisionShape2D"
 @onready var weapon = $"Weapon Node/Weapon"
 @onready var weapon_node = $"Weapon Node"
-
+ 
+@export var inventory: Inventory
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+
+
+#very basic attack script will neeed to be updated to handle abilities and multiples kinds of attack
 func _unhandled_input(event): 
 		if event.is_action_pressed("Mouse1"):
 			weapon.attack()
+
+
+
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -52,3 +55,10 @@ func _physics_process(delta):
 			weapon_node.scale.x=1
 		
 			
+
+
+
+
+func _on_hitbox_component_area_entered(area):
+	if area.has_method("collect"):
+		area.collect(inventory)

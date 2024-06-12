@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxu7ydl2cjsmf"]
+
+[ext_resource type="Script" path="res://Monsters/Healthbar.gd" id="1_umkf6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3o2m6"]
+bg_color = Color(0.97, 0.0388, 0.13192, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3r8r"]
+bg_color = Color(0.165656, 0.165656, 0.165656, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kuvf0"]
+bg_color = Color(0.964742, 0.964742, 0.964742, 1)
+
+[node name="HealthComponent" type="ProgressBar"]
+z_index = 1
+offset_right = 30.0
+offset_bottom = 4.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_3o2m6")
+show_percentage = false
+script = ExtResource("1_umkf6")
+
+[node name="Damagebar" type="ProgressBar" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_o3r8r")
+theme_override_styles/fill = SubResource("StyleBoxFlat_kuvf0")
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

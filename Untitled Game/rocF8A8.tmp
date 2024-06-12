@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkrlab65cquyb"]
+
+[ext_resource type="Script" path="res://rock(bullet).gd" id="1_os4vh"]
+[ext_resource type="Texture2D" uid="uid://bgl7e5ga06r6s" path="res://Sprites/Rock8x8.png" id="2_21qls"]
+[ext_resource type="Script" path="res://Scripts/Attack_rock.gd" id="3_25t2k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5rh3x"]
+radius = 44.4444
+
+[node name="Rock(Bullet)" type="Area2D" node_paths=PackedStringArray("attack")]
+top_level = true
+scale = Vector2(0.25, 0.25)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_os4vh")
+attack = NodePath("Area2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(4, 4)
+texture = ExtResource("2_21qls")
+
+[node name="Area2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.45, 0.45)
+shape = SubResource("CircleShape2D_5rh3x")
+script = ExtResource("3_25t2k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

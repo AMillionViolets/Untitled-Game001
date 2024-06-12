@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://b0kwt7vo5rff3"]
+
+[ext_resource type="Script" path="res://Inventroy/InventoryItem.gd" id="1_b2r2r"]
+[ext_resource type="Texture2D" uid="uid://b2jixw2q3qny8" path="res://Sprites/Sling.png" id="2_f4huu"]
+
+[resource]
+script = ExtResource("1_b2r2r")
+name = "Sling"
+texture = ExtResource("2_f4huu")

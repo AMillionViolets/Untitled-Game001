@@ -1,0 +1,260 @@
+[gd_scene load_steps=4 format=3 uid="uid://dolj1y4duwfdq"]
+
+[ext_resource type="Texture2D" uid="uid://b4bmsoa2q34fa" path="res://Sprites/Untitled.png" id="1_te3si"]
+[ext_resource type="Script" path="res://Inventroy/inventory_gui.gd" id="1_torrb"]
+[ext_resource type="PackedScene" uid="uid://bs1lcaib5u8we" path="res://Inventroy/slot.tscn" id="2_oqmip"]
+
+[node name="Inventory Gui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 391.0
+offset_right = -786.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_torrb")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -182.5
+offset_top = -255.0
+offset_right = 182.5
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_te3si")
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -34.0
+offset_right = 178.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 10
+
+[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot21" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot22" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot23" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot24" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot25" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot26" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot27" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot28" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot29" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot30" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot31" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot32" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot33" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot34" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot35" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot36" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot37" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot38" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot39" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot40" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot41" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot42" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot43" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot44" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot45" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot46" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot47" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot48" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot49" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot50" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot51" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot52" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot53" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot54" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot55" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot56" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot57" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot58" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot59" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot60" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot61" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot62" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot63" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot64" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot65" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot66" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot67" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot68" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot69" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot70" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot16" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot17" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot18" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot19" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot20" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2
+
+[node name="Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+layout_mode = 2

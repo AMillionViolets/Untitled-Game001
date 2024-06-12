@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bk7b6est6ayvj"]
+
+[ext_resource type="Script" path="res://Monsters/Goblin(Test Monster).gd" id="1_pplof"]
+[ext_resource type="Texture2D" uid="uid://dlt0vs7sotdox" path="res://Sprites/GoblinBowman.png" id="2_1dvyn"]
+[ext_resource type="PackedScene" uid="uid://dxu7ydl2cjsmf" path="res://Components/health_component.tscn" id="4_0mhs6"]
+[ext_resource type="PackedScene" uid="uid://d36gf4cloafqp" path="res://Components/hitbox_component.tscn" id="5_t3cgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1jr2"]
+size = Vector2(13.5, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0230"]
+size = Vector2(15, 14)
+
+[node name="Goblin(Test Monster)" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_pplof")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_1dvyn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.25, 2)
+shape = SubResource("RectangleShape2D_g1jr2")
+
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_t3cgy")]
+collision_layer = 6
+collision_mask = 6
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(1.5, 2)
+shape = SubResource("RectangleShape2D_k0230")
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_0mhs6")]
+offset_left = -6.0
+offset_top = 8.0
+offset_right = 9.0
+offset_bottom = 12.0
+MAX_HEALTH = 20
