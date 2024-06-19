@@ -52,16 +52,14 @@ rateofFire = 0.8
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("InitState")]
 script = ExtResource("6_d1gry")
-InitState = NodePath("idle")
+InitState = NodePath("follow")
 
 [node name="idle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("7_yom73")
 enemy = NodePath("../..")
 move_speed = 50
-followat = 150
 
 [node name="follow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("8_tja8m")
 enemy = NodePath("../..")
 move_speed = 100
-idleat = 200

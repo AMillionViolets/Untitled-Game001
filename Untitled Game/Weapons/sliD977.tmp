@@ -1,0 +1,161 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhqhcknps5e8r"]
+
+[ext_resource type="Script" path="res://Weapons/Weapon.gd" id="1_741rr"]
+[ext_resource type="PackedScene" uid="uid://bkrlab65cquyb" path="res://Weapons/rock(bullet).tscn" id="2_5jr6n"]
+[ext_resource type="Texture2D" uid="uid://b2jixw2q3qny8" path="res://Sprites/Sling.png" id="2_wb2hm"]
+[ext_resource type="Script" path="res://Player/Shooting Point.gd" id="3_vl48n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qj4hm"]
+size = Vector2(7, 12.5)
+
+[sub_resource type="Animation" id="Animation_48qrk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_tk5ud"]
+resource_name = "Sling Shot "
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5, 0), Vector2(-5, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -3.14159, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_d7doh"]
+resource_name = "Stick Swing"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.58, 0.99),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -1.5865, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.57, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-5, 0), Vector2(-8, 4), Vector2(-12, 4), Vector2(-5, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.05, 0.54, 0.92),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4fi68"]
+_data = {
+"RESET": SubResource("Animation_48qrk"),
+"Sling Shot ": SubResource("Animation_tk5ud"),
+"Stick Swing": SubResource("Animation_d7doh")
+}
+
+[node name="Weapon Node" type="Node2D"]
+
+[node name="Weapon" type="Area2D" parent="."]
+script = ExtResource("1_741rr")
+projectile = ExtResource("2_5jr6n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
+position = Vector2(-15, 2)
+rotation = 1.57091
+shape = SubResource("RectangleShape2D_qj4hm")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Weapon"]
+texture_filter = 1
+position = Vector2(-5, 0)
+texture = ExtResource("2_wb2hm")
+flip_h = true
+region_rect = Rect2(11, 0, 5, 17)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Weapon"]
+libraries = {
+"": SubResource("AnimationLibrary_4fi68")
+}
+
+[node name="Shooting Point" type="Node2D" parent="Weapon"]
+position = Vector2(-15, 0)
+script = ExtResource("3_vl48n")

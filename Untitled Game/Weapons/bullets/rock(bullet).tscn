@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bkrlab65cquyb"]
 
-[ext_resource type="Script" path="res://Weapons/rock(bullet).gd" id="1_depm3"]
-[ext_resource type="Texture2D" uid="uid://bgl7e5ga06r6s" path="res://Sprites/Rock8x8.png" id="2_rnxq7"]
+[ext_resource type="Script" path="res://Weapons/bullets/rock(bullet).gd" id="1_y2554"]
+[ext_resource type="Texture2D" uid="uid://bgl7e5ga06r6s" path="res://Sprites/Rock8x8.png" id="2_4a1uj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_35ncc"]
 radius = 20.0
@@ -11,13 +11,12 @@ top_level = true
 scale = Vector2(0.25, 0.25)
 collision_layer = 4
 collision_mask = 18
-script = ExtResource("1_depm3")
-SPEED = 300
+script = ExtResource("1_y2554")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(4, 4)
-texture = ExtResource("2_rnxq7")
+texture = ExtResource("2_4a1uj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_35ncc")

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 200.0
+@export var SPEED = 200.0
 
 
 @onready var sprite_2d = $Sprite2D
@@ -11,8 +11,6 @@ const SPEED = 200.0
  
 @export var inventory: Inventory
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 
@@ -24,11 +22,7 @@ func _unhandled_input(event):
 
 
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
+func _physics_process(_delta):
 	# y axis movement 
 	var directiony = Input.get_axis("up", "down")
 	if directiony:
@@ -60,5 +54,9 @@ func _physics_process(delta):
 
 
 func _on_hitbox_component_area_entered(area):
+	if area.has_method("collect_gold"):
+		area.collect_gold(inventory)
+		
 	if area.has_method("collect"):
 		area.collect(inventory)
+	

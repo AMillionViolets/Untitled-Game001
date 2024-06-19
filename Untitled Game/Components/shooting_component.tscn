@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfg0o18horvps"]
+
+[ext_resource type="Script" path="res://Components/shooting_component.gd" id="1_e2l48"]
+[ext_resource type="PackedScene" uid="uid://bmgkkawnpvq8o" path="res://Monsters/Attacks/rock(Ebullet).tscn" id="2_sx2tx"]
+
+[node name="Shooting Component" type="Node2D"]
+script = ExtResource("1_e2l48")
+projectile = ExtResource("2_sx2tx")
+
+[node name="FireRateControl" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="FireRateControl" to="." method="_on_timer_timeout"]

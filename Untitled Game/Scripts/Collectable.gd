@@ -6,4 +6,7 @@ class_name Collectable
 func collect(inventory: Inventory):
 	inventory.insert(itemRes)
 	queue_free()
+
+
+	
 	

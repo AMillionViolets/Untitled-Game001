@@ -1,13 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bk7b6est6ayvj"]
+[gd_scene load_steps=9 format=3 uid="uid://bk7b6est6ayvj"]
 
 [ext_resource type="Script" path="res://Monsters/Goblin(Test Monster).gd" id="1_pplof"]
 [ext_resource type="Texture2D" uid="uid://dlt0vs7sotdox" path="res://Sprites/GoblinBowman.png" id="2_1dvyn"]
 [ext_resource type="PackedScene" uid="uid://dxu7ydl2cjsmf" path="res://Components/health_component.tscn" id="4_0mhs6"]
 [ext_resource type="PackedScene" uid="uid://dfg0o18horvps" path="res://Components/shooting_component.tscn" id="5_kyuvy"]
 [ext_resource type="PackedScene" uid="uid://d36gf4cloafqp" path="res://Components/hitbox_component.tscn" id="5_t3cgy"]
-[ext_resource type="Script" path="res://Monsters/States/State Machine.gd" id="6_d1gry"]
-[ext_resource type="Script" path="res://Monsters/States/Idle.gd" id="7_yom73"]
-[ext_resource type="Script" path="res://Monsters/States/Follow.gd" id="8_tja8m"]
+[ext_resource type="PackedScene" uid="uid://bmgkkawnpvq8o" path="res://Monsters/rock(Ebullet).tscn" id="6_58lit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1jr2"]
 size = Vector2(13.5, 12)
@@ -46,22 +44,4 @@ offset_bottom = 12.0
 MAX_HEALTH = 20
 
 [node name="Shooting Component" parent="." instance=ExtResource("5_kyuvy")]
-projectileSpeed = 300
-projectileRange = 600
-rateofFire = 0.8
-
-[node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("InitState")]
-script = ExtResource("6_d1gry")
-InitState = NodePath("idle")
-
-[node name="idle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("7_yom73")
-enemy = NodePath("../..")
-move_speed = 50
-followat = 150
-
-[node name="follow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("8_tja8m")
-enemy = NodePath("../..")
-move_speed = 100
-idleat = 200
+projectile = ExtResource("6_58lit")

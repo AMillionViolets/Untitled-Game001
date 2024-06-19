@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfg0o18horvps"]
+
+[ext_resource type="Script" path="res://Aimpoint.gd" id="1_48lxc"]
+[ext_resource type="Script" path="res://Components/shooting_component.gd" id="1_e2l48"]
+
+[node name="Shooting Component" type="Node2D"]
+script = ExtResource("1_e2l48")
+
+[node name="Aimpoint" type="Node2D" parent="."]
+script = ExtResource("1_48lxc")
+
+[node name="FireRateControl" type="Timer" parent="."]
+
+[connection signal="timeout" from="FireRateControl" to="." method="_on_timer_timeout"]

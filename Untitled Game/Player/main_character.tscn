@@ -3,14 +3,14 @@
 [ext_resource type="Script" path="res://Player/Main Character.gd" id="1_vurdl"]
 [ext_resource type="Resource" uid="uid://dfupg84pliv4a" path="res://Inventroy/playerinventory.tres" id="2_2ilqw"]
 [ext_resource type="Texture2D" uid="uid://8pljb576d1v7" path="res://Sprites/Unarmed MC sprite.png" id="2_c8sk1"]
-[ext_resource type="PackedScene" uid="uid://bhqhcknps5e8r" path="res://Weapons/weaponexample.tscn" id="2_hs7ip"]
+[ext_resource type="PackedScene" uid="uid://bhqhcknps5e8r" path="res://Weapons/slingweapon.tscn" id="2_hs7ip"]
 [ext_resource type="PackedScene" uid="uid://d36gf4cloafqp" path="res://Components/hitbox_component.tscn" id="4_sfnne"]
 [ext_resource type="PackedScene" uid="uid://dxu7ydl2cjsmf" path="res://Components/health_component.tscn" id="5_lrmxj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kggpy"]
 size = Vector2(16, 15)
 
-[node name="Main Character" type="CharacterBody2D"]
+[node name="Main Character" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(-25, -10)
 collision_layer = 49
 collision_mask = 56
@@ -55,5 +55,6 @@ offset_top = 9.0
 offset_right = 4.0
 offset_bottom = 13.0
 grow_vertical = 2
+MAX_HEALTH = 100
 
 [connection signal="area_entered" from="HitboxComponent" to="." method="_on_hitbox_component_area_entered"]

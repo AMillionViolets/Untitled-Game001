@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b2jixw2q3qny8" path="res://Sprites/Sling.png" id="2_f4huu"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("1_b2r2r")
 name = "Sling"
 texture = ExtResource("2_f4huu")
+goldValue = 10

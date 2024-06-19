@@ -1,7 +1,7 @@
 extends Area2D
 
-@export var SPEED := 1000
-@export var RANGE := 1000
+var SPEED
+var RANGE
 
 
 var traveled_distance = 0
@@ -16,7 +16,8 @@ func _physics_process(delta):
 		queue_free()
 		
 		
-@export var attack_damage := 10
+var attack_damage := 0
+
 
 
 #Coliding with enemies 

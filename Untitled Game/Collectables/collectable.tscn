@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cn0qroxo4twbt"]
+[gd_scene load_steps=3 format=3 uid="uid://cn0qroxo4twbt"]
 
 [ext_resource type="Script" path="res://Scripts/Collectable.gd" id="1_4cnc6"]
 [ext_resource type="Resource" uid="uid://b0kwt7vo5rff3" path="res://Collectables/Items/slingitem.tres" id="2_6503r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eumx5"]
-resource_local_to_scene = true
 
 [node name="Collectable" type="Area2D"]
 collision_layer = 33
@@ -13,6 +10,5 @@ script = ExtResource("1_4cnc6")
 itemRes = ExtResource("2_6503r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_eumx5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

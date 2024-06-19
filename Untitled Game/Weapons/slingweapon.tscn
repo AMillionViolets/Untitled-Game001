@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhqhcknps5e8r"]
+[gd_scene load_steps=10 format=3 uid="uid://bhqhcknps5e8r"]
 
 [ext_resource type="Script" path="res://Weapons/Weapon.gd" id="1_741rr"]
+[ext_resource type="PackedScene" uid="uid://bkrlab65cquyb" path="res://Weapons/bullets/rock(bullet).tscn" id="2_5jr6n"]
 [ext_resource type="Texture2D" uid="uid://b2jixw2q3qny8" path="res://Sprites/Sling.png" id="2_wb2hm"]
 [ext_resource type="Script" path="res://Player/Shooting Point.gd" id="3_vl48n"]
 
@@ -135,6 +136,8 @@ _data = {
 
 [node name="Weapon" type="Area2D" parent="."]
 script = ExtResource("1_741rr")
+projectile = ExtResource("2_5jr6n")
+projectileSpeed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
 position = Vector2(-15, 2)

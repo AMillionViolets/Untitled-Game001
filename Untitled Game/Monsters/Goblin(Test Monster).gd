@@ -1,20 +1,15 @@
 extends CharacterBody2D
 
-@onready var main_character = %"Main Character"
-@export var MAX_HEALTH := 10
-var health : float 
+@onready var sprite_2d = $Sprite2D
 
-func _ready():
-	health=MAX_HEALTH
-
-func _physics_process(delta):
-	var direction = global_position.direction_to(main_character.global_position)
-	velocity = direction * 1500.0 *delta
+func _physics_process(_delta):
 	move_and_slide()
-
-func damage(attack: Attack):
-	print("damage taaken")
-	health-=attack.attack_damage
+	if velocity.x>0:
+			sprite_2d.flip_h = false
+	elif velocity.x<0:
+			sprite_2d.flip_h = true
+			
+			
+				
 	
-	if health <= 0:
-		get_parent().queue_free()
+

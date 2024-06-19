@@ -1,40 +1,48 @@
-[gd_scene load_steps=4 format=3 uid="uid://dolj1y4duwfdq"]
+[gd_scene load_steps=5 format=3 uid="uid://dolj1y4duwfdq"]
 
 [ext_resource type="Texture2D" uid="uid://b4bmsoa2q34fa" path="res://Sprites/Untitled.png" id="1_te3si"]
 [ext_resource type="Script" path="res://Inventroy/inventory_gui.gd" id="1_torrb"]
 [ext_resource type="PackedScene" uid="uid://bs1lcaib5u8we" path="res://Inventroy/slot.tscn" id="2_oqmip"]
+[ext_resource type="Texture2D" uid="uid://baaxsgkmp81jm" path="res://Sprites/Gold.png" id="4_5y3ug"]
 
 [node name="Inventory Gui" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 391.0
-offset_right = -786.0
-offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_torrb")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -182.5
-offset_top = -255.0
-offset_right = 182.5
-grow_horizontal = 2
-grow_vertical = 0
+offset_right = 365.0
+offset_bottom = 646.0
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_5y3ug")
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+vertical_alignment = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(365, 255)
+layout_mode = 2
 texture = ExtResource("1_te3si")
 patch_margin_left = 5
 patch_margin_top = 5
 patch_margin_right = 5
 patch_margin_bottom = 5
 
-[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/NinePatchRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -49,212 +57,212 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 10
 
-[node name="Slot" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot21" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot21" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot22" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot22" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot23" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot23" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot24" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot24" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot25" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot25" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot26" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot26" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot27" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot27" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot28" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot28" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot29" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot29" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot30" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot30" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot31" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot31" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot32" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot32" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot33" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot33" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot34" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot34" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot35" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot35" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot36" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot36" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot37" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot37" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot38" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot38" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot39" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot39" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot40" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot40" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot41" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot41" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot42" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot42" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot43" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot43" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot44" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot44" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot45" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot45" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot46" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot46" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot47" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot47" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot48" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot48" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot49" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot49" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot50" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot50" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot51" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot51" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot52" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot52" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot53" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot53" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot54" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot54" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot55" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot55" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot56" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot56" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot57" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot57" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot58" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot58" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot59" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot59" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot60" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot60" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot61" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot61" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot62" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot62" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot63" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot63" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot64" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot64" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot65" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot65" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot66" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot66" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot67" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot67" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot68" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot68" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot69" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot69" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot70" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot70" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot9" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot9" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot10" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot10" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot11" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot11" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot12" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot12" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot13" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot13" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot14" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot14" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot15" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot15" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot16" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot16" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot17" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot17" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot18" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot18" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot19" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot19" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot20" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot20" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot2" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot2" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot3" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot3" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot4" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot4" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot5" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot5" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot6" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot6" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot7" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot7" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
 
-[node name="Slot8" parent="NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
+[node name="Slot8" parent="VBoxContainer/NinePatchRect/GridContainer" instance=ExtResource("2_oqmip")]
 layout_mode = 2
